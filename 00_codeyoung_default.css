@@ -99,26 +99,6 @@ header {
     opacity: 0.45;
 }
 
-#myname {
-    opacity: 0;
-    transition: opacity 0.3s ease-in 0.3s;
-
-    font-size: 1.15vw;
-    letter-spacing: 0.06em;
-    color: black;
-    background-color: rgba(255, 255, 255, 0.5);
-
-    width: fit-content;
-
-    position: fixed;
-    margin-left: 3.5vw;
-    padding: 0px 5px 4px 5px;
-}
-
-.header_logo:hover #myname {
-    opacity: 1;
-}
-
 .header_navi {
     font-size: 1.25vw;
     font-weight: 400;
@@ -183,10 +163,6 @@ footer {
     .header_logo img {
         width: 35vh;
         margin-top: 3.5vh;
-    }
-
-    .header_logo:hover #myname {
-        opacity: 0;
     }
 
     .header_navi {
