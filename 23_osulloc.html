@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="./00_codeyoung_default.css">
+<link rel="stylesheet" href="./00_codeyoung_body.css">
+<link rel="stylesheet" href="https://use.typekit.net/vgs1vqh.css">
+<link rel="stylesheet" href="./00_flickity.css">
+<script src="./00_flickity.pkgd.js" async></script>
+
+
+<link rel="stylesheet" href="./modal_gallery.css">
+<link rel="stylesheet" href="./modal_gallery_2_nav.css">
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Young</title>
+</head>
+
+<style>
+  .credit_1 {
+    width: 25%;
+  }
+
+  /*이미지 슬라이드!!*/
+  * {
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  .slide-gallery {
+    margin-bottom: 2.5vh;
+  }
+
+  .gallery-cell {
+    width: 60vw;
+    height: 40vw;
+    margin-right: 10px;
+    /* 순번 지정 */
+    counter-increment: gallery-cell;
+  }
+
+  .gallery-cell img {
+    position: absolute;
+    top: 50%;
+    -webkit-transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+  }
+
+  /*이미지 갤러리!!*/
+  .image-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .gallery-box {
+    width: 46.77vw;
+    margin-bottom: 2.5vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .gallery-box>img {
+    object-fit: cover;
+    width: auto;
+    height: 100%;
+    margin: 0;
+  }
+
+
+  /* 모바일사이즈  모바일사이즈  모바일사이즈 */
+  @media only screen and (max-width: 700px) {
+
+    /*이미지 슬라이드! MOBILE ! MOBILE !*/
+    .slide-gallery {
+      margin-left: -2.5vw;
+      margin-right: -2.5vw;
+      margin-bottom: 2.5vw;
+    }
+
+    .gallery-cell {
+      width: 75vw;
+      height: 50vw;
+      margin-right: 10px;
+      /* 순번 지정 */
+      counter-increment: gallery-cell;
+    }
+
+    /*이미지 갤러리!!*/
+    .gallery-box {
+      width: 46.45vw;
+      margin-bottom: 2.5vw;
+    }
+
+  }
+</style>
+
+<body>
+  <header>
+    <a class="header_logo" href="./index.html">
+      <img src="./source_defalt/logo young kr.png" alt="">
+      <div id="myname">YOUNGHYUN SONG</div>
+    </a>
+
+    <div class="header_navi">
+      <a id="navi" href="./index.html">WORK</a>
+      <a id="navi" href="./04_interest_snow.html">INTEREST</a>
+      <a id="navi" href="./05_about.html">ABOUT</a>
+    </div>
+  </header>
+
+  <div class="container">
+    <img src="./23_osulloc/osulloc_01_all.jpg" alt="">
+
+    <div class="project-info">
+      <div class="info_left">
+        <div class="title">
+          Osulloc <br>
+          Teafood & Bakery Packaging Design
+        </div>
+      </div>
+
+      <div class="info_right">
+        <div class="caption">
+          오설록은 제주에서 직접 재배한 찻잎을 원료로 하는 한국의 대표 녹차 전문 브랜드입니다. 생활 속의 매력적인 차 문화를 지향하며, 차를 활용한 과자, 초콜릿 등의 티 푸드와 스프레드, 베이커리 라인을
+          선보이고 있습니다.
+          <br><br>
+          Studio fnt는 기존의 오설록 티 푸드 제품군의 위계와 맥락을 재정립하고 브랜드의 지향을 담은 패키지 시스템을 개발했습니다.
+          <br><br>
+          새로운 패키지는 진정성 있는 프리미엄 디저트로서 오설록 티 푸드의 원형을 표현하며 오설록과 제주의 연결성을 강조합니다. 제주를 대표하는 4가지 자연물을 4개의 제품 카테고리를 상징하는 패턴으로
+          만들어 제품 원료의 출발점과 지향을 표현했습니다.
+          <br><br>
+          개별 패키지 디자인에서는 티 푸드의 정면과 측면, 단면을 촬영한 뒤 리듬감 있게 배치하여 내용물을 직관적으로 전달하는 동시에 시각적 재미를 더했습니다.
+        </div>
+
+        <div class="info-credit">
+          <div class="credit_image-gallery">
+            <div class="credit_1">Field</div>
+            <div class="credit_2">Identity, Packaging Design</div>
+          </div>
+
+          <div class="credit_image-gallery">
+            <div class="credit_1">Date</div>
+            <div class="credit_2">Jan 2021 — Jun 2021</div>
+          </div>
+
+          <div class="credit_image-gallery">
+            <div class="credit_1">Team</div>
+            <div class="credit_2">Worked in the studio fnt <br>
+              Art direction: Woogyung Geel <br>
+              Graphic design: Younghyun Song, Youjeong Lee, Hyungwon Cho<br>
+              Photo: studio fnt, Sujeong Park
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <img src="./23_osulloc/osulloc_02_sum(1).png" alt="">
+
+    <div class="image-gallery">
+      <a href="./23_osulloc/osulloc_02_sum(2-1).png" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./23_osulloc/osulloc_02_sum(2-1).png">
+      </a>
+
+      <a href="./23_osulloc/osulloc_02_sum(2-2).png" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_02_sum(2-2).png">
+      </a>
+
+      <a href="./23_osulloc/osulloc_02_sum(2-3).png" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_02_sum(2-3).png">
+      </a>
+
+      <a href="./23_osulloc/osulloc_02_sum(2-4).png" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_02_sum(2-4).png">
+      </a>
+    </div>
+
+    <img src="./23_osulloc/osulloc_03_snack_set(1).jpg" alt="">
+    <img src="./23_osulloc/osulloc_03_chocolate_set(1).jpg" alt="">
+
+    <div class="slide-gallery js-flickity" data-flickity-options='{ "wrapAround": true }'>
+
+      <div class="gallery-cell">
+        <img src="./23_osulloc/osulloc_03_snack_slide(1).jpg" alt="">
+      </div>
+
+      <div class="gallery-cell">
+        <img src="./23_osulloc/osulloc_03_snack_slide(2).png" alt="">
+      </div>
+
+      <div class="gallery-cell">
+        <img src="./23_osulloc/osulloc_03_snack_slide(3).jpg" alt="">
+      </div>
+
+    </div>
+
+    <div class="image-gallery">
+      <a href="./23_osulloc/osulloc_04_snack(1).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./23_osulloc/osulloc_04_snack(1).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_04_snack(2).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_04_snack(2).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_04_snack(3).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_04_snack(3).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_04_snack(4).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_04_snack(4).jpg">
+      </a>
+    </div>
+
+    <img src="./23_osulloc/osulloc_05_snack_wafers.jpg" alt="">
+    <img src="./23_osulloc/osulloc_06_snack_waffle.jpg" alt="">
+
+    <img src="./23_osulloc/osulloc_07_chocolate_bar(1).jpg" alt="">
+    <div class="image-gallery">
+      <a href="./23_osulloc/osulloc_07_chocolate_bar(2).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./23_osulloc/osulloc_07_chocolate_bar(2).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_07_chocolate_bar(3).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_07_chocolate_bar(3).jpg">
+      </a>
+    </div>
+
+    <img src="./23_osulloc/osulloc_08_chocolate_almond(1).jpg" alt="">
+    <div class="image-gallery">
+      <a href="./23_osulloc/osulloc_08_chocolate_almond(2).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./23_osulloc/osulloc_08_chocolate_almond(2).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_08_chocolate_almond(3).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_08_chocolate_almond(3).jpg">
+      </a>
+    </div>
+
+    <img src="./23_osulloc/osulloc_09_chocolate_raspberry.jpg" alt="">
+
+    <img src="./23_osulloc/osulloc_10_table(1).jpg" alt="">
+    <div class="image-gallery">
+      <a href="./23_osulloc/osulloc_10_table(2).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./23_osulloc/osulloc_10_table(2).jpg">
+      </a>
+
+      <a href="./23_osulloc/osulloc_10_table(3).jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./23_osulloc/osulloc_10_table(3).jpg">
+      </a>
+    </div>
+    <div class="img-vertical">
+      <img src="./23_osulloc/osulloc_10_table(4).jpg" alt="">
+    </div>
+
+  </div>
+
+  <footer>
+    <div class="footer_box">
+
+      <div class="footer_left">
+        <a href="./index.html">
+          Younghyun Song
+        </a>
+      </div>
+
+      <div class="footer_right">
+        Based in Seoul<br>
+        Hello :><br><br>
+        <span id="underline">
+          <a href="mailto:" yhyun4156@gmail.com>yhyun4156@gmail.com</a><br>
+          <a href="https://www.instagram.com/ma_frame/" target="_blank">instagram ↗</a> <br><br>
+          © Younghyun Song. 2022
+        </span>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // 팝업 갤러리
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
+  </script>
+
+</body>
+
+</html>
