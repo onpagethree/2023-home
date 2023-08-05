@@ -1,0 +1,212 @@
+/* 한글 폰트 */
+@font-face {
+    font-family: "gothica1";
+    src: url(./source_defalt/Gothica1/GothicA1-Medium.ttf);
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "gothica1";
+    src: url(./source_defalt/Gothica1/GothicA1-SemiBold.ttf);
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "gothica1";
+    src: url(./source_defalt/Gothica1/GothicA1-ExtraBold.ttf);
+    font-weight: 800;
+}
+
+/* 영문 폰트 */
+@import url("https://use.typekit.net/vgs1vqh.css");
+
+/* 기본 설정 */
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    scroll-behavior: smooth;
+
+    font-family: "basic-sans", "gothica1";
+    word-break: keep-all;
+}
+
+img {
+    display: block;
+    margin: 0;
+    width: 100%;
+    height: auto;
+}
+
+#underline {
+    text-decoration: underline;
+}
+
+body {
+    padding: 0 2.5vw 0 2.5vw;
+}
+
+body::-webkit-scrollbar {
+    width: 0;
+}
+
+/*NAVI 버튼 파란밑줄 없애기*/
+a {
+    text-decoration: none;
+}
+
+a:link {
+    color: inherit;
+}
+
+a:visited {
+    color: inherit;
+}
+
+a:hover {
+    color: inherit;
+}
+
+a:active {
+    color: inherit;
+}
+
+/*HEADER 헤더*/
+header {
+    margin: 3vh 0 4vh 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: top;
+}
+
+/*HEADER 헤더 제목*/
+.header_logo {
+    display: flex;
+    align-items: center;
+}
+
+.header_logo img {
+    position: fixed;
+
+    width: 29vh;
+    height: auto;
+
+    opacity: 1;
+    transition: all 0.3s ease-in;
+}
+
+.header_logo img:hover {
+    opacity: 0.45;
+}
+
+#myname {
+    opacity: 0;
+    transition: opacity 0.3s ease-in 0.3s;
+
+    font-size: 1.15vw;
+    letter-spacing: 0.06em;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.5);
+
+    width: fit-content;
+
+    position: fixed;
+    margin-left: 3.5vw;
+    padding: 0px 5px 4px 5px;
+}
+
+.header_logo:hover #myname {
+    opacity: 1;
+}
+
+.header_navi {
+    font-size: 1.25vw;
+    font-weight: 400;
+    display: block;
+    right: 0;
+}
+
+#navi {
+    margin-left: 2vw;
+    color: rgb(0, 0, 0, 1);
+}
+
+#navi:hover {
+    color: rgba(0, 0, 0, 0.45);
+
+    transition: all 0.2s ease-in;
+}
+
+
+/* FOOTER 하단바 웹사이즈 */
+footer {
+    background-color: #f7f7f7;
+    margin: 0 -2.5vw 0 -2.5vw;
+    padding: 4vh 2.5vw 4vh 2.5vw;
+    display: flex;
+
+    font-size: 1vw;
+}
+
+.footer_box {
+    margin: 0 0 3vh 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+.footer_left {
+    width: 45vw;
+    margin-right: 5vw;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.footer_right {
+    flex: 1;
+    padding-right: 8vw;
+}
+
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+    body {
+        padding: 0 2.5vw 0 2.5vw;
+    }
+
+    header {
+        margin: 1.5vh 0 1.5vh 0;
+    }
+
+    /*HEADER 헤더 제목 모바일사이즈*/
+    .header_logo img {
+        width: 35vh;
+        margin-top: 3.5vh;
+    }
+
+    .header_logo:hover #myname {
+        opacity: 0;
+    }
+
+    .header_navi {
+        font-size: 4.2vw;
+    }
+
+    #navi {
+        margin-left: 2vw;
+    }
+
+    /* FOOTER 하단바 모바일사이즈 */
+    footer {
+        margin: 0 -2.5vw 0 -2.5vw;
+        padding: 3vh 3vw 3vh 3vw;
+        font-size: 3.6vw;
+    }
+
+    .footer_left {
+        width: 40vw;
+        margin-right: 5vw;
+    }
+
+}
