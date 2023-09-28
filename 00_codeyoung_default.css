@@ -28,6 +28,7 @@
 
     font-family: "basic-sans", "gothica1";
     word-break: keep-all;
+    position: relative;
 }
 
 img {
@@ -87,29 +88,20 @@ header {
 
 /*HEADER 헤더 제목*/
 .header_logo {
-    display: flex;
-    align-items: center;
-}
-
-.header_logo img {
+    font-size: 1.25em;
     position: fixed;
 
-    width: 29vh;
-    height: auto;
-
-    opacity: 1;
-    transition: all 0.3s ease-in;
+    z-index: 100;
 }
 
-.header_logo img:hover {
+.header_logo:hover {
     opacity: 0.45;
 }
 
 .header_navi {
-    font-size: 1.25vw;
-    font-weight: 400;
-    display: block;
-    right: 0;
+    font-size: 1.1em;
+    position: absolute;
+    right: .25em;
 }
 
 #navi {
