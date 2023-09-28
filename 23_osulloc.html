@@ -3,6 +3,8 @@
 <link rel="stylesheet" href="./00_codeyoung_default.css">
 <link rel="stylesheet" href="./00_codeyoung_body.css">
 <link rel="stylesheet" href="https://use.typekit.net/vgs1vqh.css">
+<!-- 갤러리 css -->
+<link rel="stylesheet" href="./gallery.css">
 
 <link rel="stylesheet" href="./00_flickity.css">
 <script src="./00_flickity.pkgd.js" async></script>
@@ -27,86 +29,6 @@
 <style>
   .credit_1 {
     width: 25%;
-  }
-
-  /*이미지 슬라이드!!*/
-  * {
-    -webkit-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  .slide-gallery {
-    margin-bottom: 2.5vh;
-  }
-
-  .gallery-cell {
-    width: 60vw;
-    height: 40vw;
-    margin-right: 10px;
-    /* 순번 지정 */
-    counter-increment: gallery-cell;
-  }
-
-  .gallery-cell img {
-    position: absolute;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-    width: 100%;
-    height: auto;
-    overflow: hidden;
-  }
-
-  /*이미지 갤러리!!*/
-  .image-gallery {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-
-  .gallery-box {
-    width: 46.77vw;
-    margin-bottom: 2.5vh;
-
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .gallery-box>img {
-    object-fit: cover;
-    width: auto;
-    height: 100%;
-    margin: 0;
-  }
-
-
-  /* 모바일사이즈  모바일사이즈  모바일사이즈 */
-  @media only screen and (max-width: 700px) {
-
-    /*이미지 슬라이드! MOBILE ! MOBILE !*/
-    .slide-gallery {
-      margin-left: -2.5vw;
-      margin-right: -2.5vw;
-      margin-bottom: 2.5vw;
-    }
-
-    .gallery-cell {
-      width: 75vw;
-      height: 50vw;
-      margin-right: 10px;
-      /* 순번 지정 */
-      counter-increment: gallery-cell;
-    }
-
-    /*이미지 갤러리!!*/
-    .gallery-box {
-      width: 46.45vw;
-      margin-bottom: 2.5vw;
-    }
-
   }
 </style>
 
