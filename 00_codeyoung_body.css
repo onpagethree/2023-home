@@ -11,57 +11,31 @@
   }
 
   .info_left {
-      width: 45vw;
-      margin-right: 5vw;
+      width: 50%;
+      padding-right: 5vw;
   }
 
   .info_right {
       flex: 1;
-      padding-right: 8vw;
+
+      /* 줄글 조정하기 */
+      padding-right: 5vw;
   }
 
   .title {
-      font-size: 2.5vw;
-      letter-spacing: -0.02em;
-      line-height: 120%;
+      font-size: 2.12em;
+      line-height: 2.6rem;
+
   }
 
   .caption {
-      font-size: 1.2vw;
-      font-weight: 400;
-      letter-spacing: 100%;
-      line-height: 155%;
+      font-size: 1em;
 
       margin-bottom: 3vw;
   }
 
-  /* 프로젝트 관련 페이지 */
-  .project-caption {
-      margin: 5vw 0 2vw 0;
-
-      display: flex;
-  }
-
-  .info-page {
-      color: rgba(0, 0, 0, 0.45);
-      margin-right: 5vw;
-
-      font-weight: 400;
-      font-size: 1.25vw;
-      letter-spacing: 100%;
-      line-height: 145%;
-
-      margin-bottom: 3.3vw;
-  }
-
-  /* 프로젝트 크레딧 */
-
-  .info-credit {
-      font-size: 1.25vw;
-      line-height: 145%;
-  }
-
-  .credit_image-gallery {
+  /* 크레딧 */
+  .credit_box {
       display: flex;
 
       border-top: 1px solid rgba(0, 0, 0, 0.45);
@@ -70,12 +44,50 @@
   }
 
   .credit_1 {
-      width: 35%;
+      width: 30%;
   }
 
   .credit_2 {
       flex: 1;
   }
+
+
+  /* 연결 페이지가 있는 경우 */
+  .info-page {
+      color: rgba(0, 0, 0, 0.45);
+      margin-right: 5vw;
+      margin-bottom: 3.3vw;
+
+      font-size: 1.1em;
+  }
+
+
+
+
+  /* 프로젝트 중간글 더블더블 */
+  .mid_text_double {
+      margin: 5vw 0 6vw 0;
+
+      display: flex;
+  }
+
+  .text_left {
+      width: 50%;
+      padding-right: 5vw;
+  }
+
+  .text_right {
+      flex: 1;
+      /* 줄글 조정하기 */
+      padding-right: 5vw;
+  }
+
+  .text {
+      font-size: 1em;
+
+      margin-bottom: 3vw;
+  }
+
 
   /*IMG IMG 이미지 설정*/
 
@@ -125,7 +137,7 @@
 
       /* 프로젝트 설명 모바일사이즈 */
       .project-info {
-          margin: 5vw 2vw 7.5vw 2vw;
+          margin: 5vw 2vw 8vw 2vw;
 
           flex-direction: column;
       }
@@ -139,54 +151,53 @@
       }
 
       .title {
-          font-size: 7.4vw;
-          letter-spacing: 0em;
-          line-height: 120%;
-
           margin-bottom: 5vw;
       }
 
       .caption {
-          font-size: 3.7vw;
-          line-height: 160%;
-
-          margin-left: 12vw;
-          margin-bottom: 5vw;
+          margin-bottom: 7vw;
       }
-
-      /* 프로젝트 관련 페이지 모바일 */
 
       .info-page {
           margin-left: 12vw;
           margin-bottom: 5vw;
       }
 
-      .info-page,
-      .info-page a {
-          font-size: 3.9vw;
-      }
 
       /* 프로젝트 크레딧 모바일*/
-
-      .info-credit {
-          margin-left: 12vw;
-          margin-top: 7vw;
-
-          font-size: 3.9vw;
-          line-height: 140%;
-      }
-
-      .credit_image-gallery {
+      .credit_box {
           display: flex;
-
           border-top: 1px solid rgba(0, 0, 0, 0.45);
           margin-top: 0.5vw;
           padding-top: 0.5vw;
+
+          font-size: .88em;
+          line-height: 1.5em
       }
 
       .credit_1 {
-          width: 23%;
+          width: 24%;
       }
+
+
+      /* 프로젝트 중간글 더블더블 */
+      .mid_text_double {
+          flex-direction: column;
+      }
+
+      .text_left {
+          width: 95%;
+      }
+
+      .text_right {
+          /* 줄글 조정하기 */
+          padding-left: 7vw;
+      }
+
+      .text {
+          line-height: 1.5em
+      }
+
 
       /*IMG IMG 이미지 설정 모바일*/
 
