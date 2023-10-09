@@ -13,65 +13,6 @@
 </head>
 
 <style>
-  /* 옵션 바  옵션 바  옵션 바  옵션 바*/
-  .optionbar {
-    font-size: 1vw;
-    margin: 0 0 5vh 0;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  /* Button */
-  #optionbtn {
-    background-color: rgba(0, 0, 0, 0);
-    text-decoration: underline;
-    color: black;
-    font-size: 1vw;
-    border: none;
-    cursor: pointer;
-  }
-
-  #optionbtn:hover,
-  #optionbtn:focus {
-    color: rgb(187, 187, 187);
-  }
-
-  .option-1 {
-    position: relative;
-    display: inline-block;
-  }
-
-  .option-dropdown {
-    margin: 5px 0px 0px -0.7vw;
-    padding-bottom: 15px;
-    display: none;
-    position: absolute;
-    background-color: #f7f7f7;
-    border-radius: 12.5%;
-    min-width: 13.2vw;
-    overflow: auto;
-  }
-
-  .option-dropdown a {
-    font-size: 1vw;
-    color: black;
-    text-decoration: none;
-    padding: 15px 15px 0 15px;
-    display: block;
-  }
-
-  .option-1 a:hover {
-    color: rgb(187, 187, 187);
-  }
-
-  .show {
-    display: block;
-  }
-
-  #selected {
-    color: rgb(255, 50, 0);
-  }
-
   /* 바디 내용 시작 web web 웹 */
   .container {
     display: flex;
@@ -119,46 +60,6 @@
 
   /* 모바일사이즈  모바일사이즈  모바일사이즈 */
   @media only screen and (max-width: 700px) {
-    body {
-      margin: 0 3.3vw 0 3.3vw;
-    }
-
-    header {
-      margin: 1.5vh 0 6vh 0;
-    }
-
-    .header_name {
-      font-size: 4.2vw;
-    }
-
-    .header_navi {
-      font-size: 4vw;
-    }
-
-    .header_navi>a {
-      margin-left: 3vw;
-    }
-
-    /* 옵션바 mobile */
-    .optionbar {
-      margin-bottom: 3vh;
-    }
-
-    #optionbtn {
-      font-size: 4vw;
-    }
-
-    .option-dropdown a {
-      font-size: 4vw;
-      min-width: 40vw;
-      overflow: auto;
-    }
-
-    /* 리스트 or 갤러리 mobile */
-    .option-2 {
-      font-size: 4vw;
-      margin-left: 3vw;
-    }
 
     /* 바디  바디  바디 mobile */
     .container {
@@ -185,16 +86,14 @@
       width: 100%;
       height: auto;
     }
-
-
   }
 </style>
+
 
 <body>
   <header>
     <a class="header_logo" href="./index.html">
-      <img src="./source_defalt/logo young kr.png" alt="">
-
+      Younghyun Song
     </a>
 
     <div class="header_navi">
@@ -215,6 +114,7 @@
       </div>
     </div>
   </div>
+
   <script>
     function myFunction() {
       document.getElementById("option-dropdown").classList.toggle("show");
