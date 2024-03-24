@@ -18,7 +18,17 @@
 }
 
 /* 영문 폰트 */
-@import url("https://use.typekit.net/vgs1vqh.css");
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300..700&display=swap');
+/* <uniquifier>: Use a unique and descriptive class name */
+/* // <weight>: Use a value from 300 to 700 */
+
+/* .space-grotesk-<uniquifier> {
+    font-family: "Space Grotesk", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: <weight>;
+    font-style: normal;
+} */
 
 /* 기본 설정 */
 * {
@@ -26,7 +36,7 @@
     padding: 0;
     margin: 0;
 
-    font-family: "basic-sans", "gothica1";
+    font-family: "Space Grotesk", "gothica1";
     word-break: keep-all;
     position: relative;
 }
