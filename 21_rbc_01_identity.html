@@ -6,6 +6,21 @@
 <!-- 갤러리 css -->
 <link rel="stylesheet" href="./gallery.css">
 
+<link rel="stylesheet" href="./00_flickity.css">
+<script src="./00_flickity.pkgd.js" async></script>
+
+<!-- 모달 갤러리 -->
+<link rel="stylesheet" href="./modal_gallery.css">
+<link rel="stylesheet" href="./modal_gallery_2_nav.css">
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/js/bootstrap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/ekko-lightbox/5.3.0/ekko-lightbox.min.js"></script>
+
+<title>Young</title>
+
+
 <head>
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -14,310 +29,12 @@
 </head>
 
 <style>
-  /* 바디 내용 시작 */
-  .container {
-    height: 87vh;
-    display: flex;
-    margin-bottom: 100px;
-  }
-
-  .column-left {
-    width: 75%;
-    overflow: auto;
-  }
-
-  .column-left img {
-    /*더블이미지에 필수*/
-    max-width: 100%;
-    height: auto;
-    margin-bottom: 2vh;
-  }
-
-  .column-left>:last-child {
-    width: auto;
-    height: auto;
-  }
-
-  /*더블이미지*/
-  .img-double {
-    display: flex;
-    margin-bottom: 2vh;
-  }
-
-  .img-double>:first-child {
-    padding-right: 1vh;
-  }
-
-  .img-double>:last-child {
-    padding-left: 1vh;
-  }
-
-  .img-double-box {
-    flex: 1;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-  }
-
-  .img-double-box>img {
-    object-fit: cover;
-    width: auto;
-    height: 100%;
-    margin: 0;
-  }
-
-  /*세로이미지*/
-  .img-vertical {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-bottom: 2vh;
-  }
-
-  .img-vertical>img {
-    width: 60%;
-    margin: 0;
-  }
-
-  #sectionimg {
-    margin-top: 6vh;
-  }
-
-  #joaquin {
-    width: 40%;
-  }
-
-  .mid_text {
-    font-size: 0.7vw;
-    line-height: 150%;
-    color: rgb(136, 136, 136);
-    text-align: center;
-    margin: 6vh 0 6vh 0;
-  }
-
-
-  /* 유튜브 링크 */
-  .youtube {
-    position: relative;
-    padding-bottom: 66.8%;
-    height: 0;
-    overflow-y: hidden;
-    margin-bottom: 2vh;
-  }
-
-  .youtube iframe,
-  .youtube object,
-  .youtube embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    word-wrap: 100%;
-    height: 100%;
-  }
-
-  /* 우측 Column 우측 Column WEB 웹사이즈 */
-  .column-right {
-    width: 25vw;
-    padding: 0 0 0 2.5vw;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-  }
-
-  .full-text {
-    flex: 1;
-  }
-
-  .title {
-
-    font-size: 1.4vw;
-    letter-spacing: -0.02em;
-    line-height: 135%;
-    margin-bottom: 1.35vw;
-  }
-
-  .caption {
-    font-weight: 400;
-    font-size: 0.85vw;
-    letter-spacing: 98%;
-    line-height: 145%;
-  }
-
-  .page {
-    margin-top: 3vh;
-
-    font-weight: 400;
-    font-size: 0.85vw;
-    letter-spacing: 98%;
-    line-height: 150%;
-    color: #00000065;
-  }
-
-  /* 우측 하단  WEB 웹사이즈 */
-  .right-summary-mobile {
-    display: none;
-  }
-
-  .right-summary-web {
-    font-size: 0.7vw;
-    line-height: 145%;
-    display: flex;
-    flex-direction: column;
-  }
-
-  .summary {
-    display: flex;
-    flex-direction: row;
-    border-bottom: 1px solid #00000050;
-    padding-bottom: 0.25vw;
-    margin-top: 0.25vw;
-  }
-
-  .summary:last-child {
-    border-bottom: 0px;
-  }
-
-  .summary1 {
-    width: 28%;
-  }
-
-  .summary2 {
-    flex: 1;
-  }
-
-
-  /* 모바일 사이즈 모바일 사이즈 모바일 사이즈 모바일 사이즈 모바일 사이즈 */
-  @media only screen and (max-width: 700px) {
-
-    /* container  모바일사이즈 */
-    .container {
-      margin: 0;
-      height: 100%;
-      flex-direction: column-reverse;
-    }
-
-    .column-left {
-      width: 100%;
-      height: auto;
-      overflow: auto;
-    }
-
-    .column-left>img {
-      margin-bottom: 1vh;
-    }
-
-    .youtube {
-      margin-bottom: 1vh;
-    }
-
-    .mid_text {
-      font-size: 3vw;
-      line-height: 145%;
-      color: rgb(136, 136, 136);
-      text-align: center;
-      margin: 5vh 0 5vh 0;
-    }
-
-    .column-left>:last-child {
-      margin-bottom: 0;
-    }
-
-    .img-double {
-      display: flex;
-      margin-bottom: 1vh;
-    }
-
-    .img-double>:first-child {
-      padding-right: 0.5vh;
-    }
-
-    .img-double>:last-child {
-      padding-left: 0.5vh;
-    }
-
-    .img-vertical {
-      margin-bottom: 3.5vw;
-    }
-
-    .img-vertical>img {
-      width: 100%;
-    }
-
-    .img_text {
-      font-size: 3vw;
-      line-height: 145%;
-      color: rgb(136, 136, 136);
-      margin: -0.5vh 0 1vh 0;
-    }
-
-    #joaquin {
-      width: 100%;
-      height: auto;
-    }
-
-    /* coloumn-right  모바일사이즈 */
-    .column-right {
-      width: 100%;
-      height: 100%;
-      padding: 0;
-    }
-
-    .title {
-      font-weight: 500;
-      font-size: 6.2vw;
-      line-height: 130%;
-      margin-bottom: 5vw;
-    }
-
-    .caption {
-      font-size: 3.2vw;
-    }
-
-    .full-text {
-      margin-bottom: 6vh;
-    }
-
-    .page {
-      font-size: 3.2vw;
-      line-height: 145%;
-    }
-
-    .page>a {
-      font-size: 3.2vw;
-      line-height: 145%;
-    }
-
-    /* SUMMARY mobile */
-    .right-summary-web {
-      display: none;
-    }
-
-    .right-summary-mobile {
-      display: block;
-      margin-top: 6vh;
-      margin-bottom: 12vh;
-      font-size: 3vw;
-    }
-
-    .summary {
-      padding-bottom: 1vw;
-      margin-top: 1vw;
-    }
-
-    .summary1 {
-      width: 22%;
-    }
-
-
-  }
 </style>
 
 <body>
   <header>
     <a class="header_logo" href="./index.html">
-      <img src="./source_defalt/logo young kr.png" alt="">
-
+      Younghyun Song
     </a>
 
     <div class="header_navi">
@@ -327,150 +44,148 @@
   </header>
 
   <div class="container">
-    <div class="column-left">
+    <img src="./21_rbc/rbc_01_identity/rbc-01-1-logo.jpg" alt="">
 
-      <img src="./21_rbc/rbc_01_identity/rbc-01-1-logo.jpg" alt="">
-
-      <div class="youtube">
-        <iframe width="100%" height="100%"
-          src="https://www.youtube.com/embed/Y3jzKmnCEec?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=Y3jzKmnCEec"
-          title="YouTube video player" frameborder="0"
-          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-          allowfullscreen></iframe>
-      </div>
-
-      <div class="mid_text">
-        <span id="underline"></span>
-        영상 오류가 발생했을 경우 새로고침 하시면 재생할 수 있습니다.
-      </div>
-
-      <div class="mid_text">
-        <span id="underline">Main Graphic - Grid</span><br><br>
-        매 주 셀렉된 원두들이 놓이는 정면의 장은 공간을 대표하는 요소입니다. <br>
-        이 원두 전시장으로부터 브랜드 메인 그래픽이 전개되었습니다.
-      </div>
-
-      <div class="img-vertical">
-        <img src="./21_rbc/rbc_01_identity/rbc-01-2-bean.JPG" alt="">
-      </div>
-      <div class="img-double">
-        <div class="img-double-box">
-          <img src="./21_rbc/rbc_01_identity/rbc-01-3-paper.jpg" alt="">
-        </div>
-        <div class="img-double-box">
-          <img src="./21_rbc/rbc_01_identity/rbc-01-4-paper.jpg" alt="">
-        </div>
-      </div>
-
-      <div class="mid_text">
-        --
-      </div>
-
-      <img id="sectionimg" src="./21_rbc/rbc_01_identity/rbc-02-1.gif" alt="">
-      <div class="mid_text">
-        <span id="underline">System 1 - Squad</span><br><br>
-        다양한 원두를 직관적으로 인식시키기 위해
-        텍스춰와 산미로 나뉘는 커피 스쿼드(취향표)를 제작했습니다.
-      </div>
-
-      <img src="./21_rbc/rbc_01_identity/rbc-02-2.png" alt="">
-
-      <div class="mid_text">
-        --
-      </div>
-
-      <img id="sectionimg" src="./21_rbc/rbc_01_identity/rbc-03-1.png" alt="">
-      <div class="mid_text">
-        <span id="underline">System 2 - Labels</span> <br><br>
-        원두의 정보를 간단하게 전달하는 커피 TAG 방식을 고안했습니다.<br>
-        브랜드 이미지 색을 활용, 컵을 감싸는 형식으로 활용할 것을 제안했습니다.
-        <br><br>
-        현재는 RBC의 대표 이미지로 자리잡았습니다.
-      </div>
-
-      <img src="./21_rbc/rbc_01_identity/rbc-03-2.png" alt="">
-      <img src="./21_rbc/rbc_01_identity/rbc-03-4.JPG" alt="">
-      <img src="./21_rbc/rbc_01_identity/rbc-03-3.jpg" alt="">
-      <div class="img-vertical">
-        <img src="./21_rbc/rbc_01_identity/rbc-03-5.jpg" alt="">
-      </div>
-      <div class="img-vertical">
-        <img id="joaquin" src="./21_rbc/rbc_01_identity/rbc-joaquin.png" alt="">
-      </div>
-    </div>
-
-    <div class="column-right">
-      <div class="full-text">
-        <div class="title">RBC
+    <div class="project-info">
+      <div class="info_left">
+        <div class="title">
+          RBC
           <br>Radical Brewing Club
         </div>
+      </div>
+
+      <div class="info_right">
         <div class="caption">
           카페 Radical Brewing Club의 비주얼 브랜딩을 담당했습니다.
           <br><br>
           RBC는 국내 로스터리들로부터 원두를 셀렉해 소개하는 카페입니다.
           매 주 변경되는 낯설은 원두들을 소개하는 방식에 대하여 고민했습니다.
+          <br><br>
+
+          <div class="info-page">
+            Related Projects
+            <br>
+            <a id="underline" href="./21_rbc_01_identity.html">
+              - RBC identity
+            </a>
+            <br>
+            <a href="./21_rbc_02_aeweol.html">
+              - RBC aewol Graphic
+            </a>
+            <br>
+            <a href="./21_rbc_03_aewolAD.html">
+              - RBC aewol AD film
+            </a>
+          </div>
         </div>
 
-        <div class="page">
+        <div class="info-credit">
+          <div class="credit_box">
+            <div class="credit_1">Field</div>
+            <div class="credit_2">Brand Identity</div>
+          </div>
 
-          <a id="underline" href="./21_rbc/21_rbc_01_identity.html">
-            - RBC identity
-          </a>
-          <br>
-          <a href="./21_rbc_02_aeweol.html">
-            - RBC aewol Graphic
-          </a>
-          <br>
-          <a href="./21_rbc_03_aewolAD.html">
-            - RBC aewol AD film
-          </a>
-        </div>
+          <div class="credit_box">
+            <div class="credit_1">Date</div>
+            <div class="credit_2">Oct 2020</div>
+          </div>
 
-      </div>
-
-      <div class="right-summary-web">
-        <div class="summary">
-          <div class="summary1">Project</div>
-          <div class="summary2">Radical Brewing Club</div>
-        </div>
-        <div class="summary">
-          <div class="summary1">Field</div>
-          <div class="summary2">Identity / Graphic</div>
-        </div>
-        <div class="summary">
-          <div class="summary1">Date</div>
-          <div class="summary2">2020.10</div>
-        </div>
-        <div class="summary">
-          <div class="summary1">Team</div>
-          <div class="summary2">Personal design work &
-            <br>Cooperated with branding manager
+          <div class="credit_box">
+            <div class="credit_1">Team</div>
+            <div class="credit_2">Personal design work &
+              <br>Cooperated with Team RBC
+            </div>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
+    <div class="youtube">
+      <iframe width="100%" height="100%"
+        src="https://www.youtube.com/embed/Y3jzKmnCEec?modestbranding=1&autoplay=1&mute=1&version=3&loop=1&playlist=Y3jzKmnCEec"
+        title="YouTube video player" frameborder="0"
+        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+        allowfullscreen></iframe>
+    </div>
+
+    <div class="mid_text">
+      <span id="underline"></span>
+      영상 오류가 발생했을 경우 새로고침 하시면 재생할 수 있습니다.
+    </div>
+
+    <div class="mid_text">
+      <span id="underline">Main Graphic - Grid</span><br><br>
+      매 주 셀렉된 원두들이 놓이는 정면의 장은 공간을 대표하는 요소입니다. <br>
+      이 원두 전시장으로부터 브랜드 메인 그래픽이 전개되었습니다.
+    </div>
+
+    <div class="img-vertical">
+      <img src="./21_rbc/rbc_01_identity/rbc-01-2-bean.jpg" alt="">
+    </div>
+
+    <div class="image-gallery">
+      <a href="./21_rbc/rbc_01_identity/rbc-01-3-paper.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./21_rbc/rbc_01_identity/rbc-01-3-paper.jpg">
+      </a>
+
+      <a href="./21_rbc/rbc_01_identity/rbc-01-4-paper.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./21_rbc/rbc_01_identity/rbc-01-4-paper.jpg">
+      </a>
+    </div>
+
+
+    <!-- SECTION 01 -->
+    <img src="./21_rbc/rbc_01_identity/rbc-02-1.gif" alt="">
+
+    <div class="mid_text">
+      <span id="underline">System 1 - Squad</span><br><br>
+      다양한 원두를 직관적으로 인식시키기 위해
+      텍스춰와 산미로 나뉘는 커피 스쿼드(취향표)를 제작했습니다.
+    </div>
+
+    <img src="./21_rbc/rbc_01_identity/rbc-02-2.png" alt="">
+
+
+    <!-- SECTION 02 -->
+    <img src="./21_rbc/rbc_01_identity/rbc-03-1.png" alt="">
+
+    <div class="mid_text">
+      <span id="underline">System 2 - Labels</span> <br><br>
+      원두의 정보를 간단하게 전달하는 커피 TAG 방식을 고안했습니다.<br>
+      브랜드 이미지 색을 활용, 컵을 감싸는 형식으로 활용할 것을 제안했습니다.
+      <br><br>
+      현재는 RBC의 대표 이미지로 자리잡았습니다.
+    </div>
+
+    <img src="./21_rbc/rbc_01_identity/rbc-03-2.png" alt="">
+
+    <div class="image-gallery">
+      <a href="./21_rbc/rbc_01_identity/rbc-03-4.JPG" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box"><img src="./21_rbc/rbc_01_identity/rbc-03-4.JPG">
+      </a>
+
+      <a href="./21_rbc/rbc_01_identity/rbc-03-3.jpg" data-toggle="lightbox" data-gallery="example-gallery"
+        class="gallery-box">
+        <img src="./21_rbc/rbc_01_identity/rbc-03-3.jpg">
+      </a>
+    </div>
+
+
+    <div class="img-vertical">
+      <img src="./21_rbc/rbc_01_identity/rbc-03-5.jpg" alt="">
+    </div>
+    <div class="img-vertical" style="width: 50vw; margin: 0 auto;">
+      <img id="joaquin" src="./21_rbc/rbc_01_identity/rbc-joaquin.png" alt="">
+    </div>
   </div>
 
-  <div class="right-summary-mobile">
-    <div class="summary">
-      <div class="summary1">Project</div>
-      <div class="summary2">Radical Brewing Club</div>
-    </div>
-    <div class="summary">
-      <div class="summary1">Field</div>
-      <div class="summary2">Identity / Graphic</div>
-    </div>
-    <div class="summary">
-      <div class="summary1">Date</div>
-      <div class="summary2">2020.10</div>
-    </div>
-    <div class="summary">
-      <div class="summary1">Team</div>
-      <div class="summary2">Personal design work &
-        <br>Cooperated with branding manager
-      </div>
-    </div>
+
+  <div class="mid_text" style="margin-bottom: 20px;">
+    Dear, Joaquin
+  </div>
+
+
   </div>
 
   <footer>
@@ -492,7 +207,13 @@
   </footer>
 
   <script>
+    // 팝업 갤러리
+    $(document).on('click', '[data-toggle="lightbox"]', function (event) {
+      event.preventDefault();
+      $(this).ekkoLightbox();
+    });
   </script>
+
 </body>
 
 </html>
