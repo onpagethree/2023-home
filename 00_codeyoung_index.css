@@ -1,184 +1,201 @@
- /* 옵션 바  옵션 바  옵션 바  옵션 바*/
- #textInput {
-     display: inline-block;
-     width: 82%;
-     top: -.32em;
-     left: .12em;
-     margin-bottom: .3em;
+/* HOME 첫 화면*/
+#textInput {
+    display: inline-block;
+    width: 82%;
+    top: -.32em;
+    left: .12em;
+    margin-bottom: .3em;
 
-     font-size: 10em;
-     line-height: 1.2em;
+    font-size: 11.4em;
+    line-height: 1.15em;
 
-     border: none;
-     /* 박스 테두리 없애기 */
-     outline: none;
-     /* 포커스 효과 없애기 */
- }
-
- ::selection {
-     background-color: unset;
-     /* 드래그된 텍스트의 배경색을 빨간색으로 설정 */
-     color: rgb(60, 145, 255);
-     /* 드래그된 텍스트의 글자색을 흰색으로 설정 */
- }
+    border: none;
+    /* 박스 테두리 없애기 */
+    outline: none;
+    /* 포커스 효과 없애기 */
+}
 
 
 
-
- /* WORK 인덱스 */
-
- .optionbar {
-     font-size: 1vw;
-     margin: 5vh 0 3vh 0;
-     display: flex;
-     justify-content: space-between;
-
-     z-index: 100;
- }
-
- /* Button */
- #optionbtn {
-     background-color: rgba(0, 0, 0, 0);
-     text-decoration: underline;
-     color: black;
-     font-size: 1vw;
-     border: none;
-     cursor: pointer;
- }
-
- #optionbtn:hover,
- #optionbtn:focus {
-     color: rgb(187, 187, 187);
- }
-
- .option-1 {
-     position: relative;
-     display: inline-block;
- }
-
- .option-dropdown {
-     margin: 5px 0px 0px -0.7vw;
-     padding-bottom: 15px;
-     display: none;
-     position: absolute;
-     background-color: #f7f7f7;
-     border-radius: 12.5%;
-     min-width: 13.2vw;
-     overflow: auto;
- }
-
- .option-dropdown a {
-     font-size: 1vw;
-     color: black;
-     text-decoration: none;
-     padding: 15px 15px 0 15px;
-     display: block;
- }
-
- .option-1 a:hover {
-     color: rgb(187, 187, 187);
- }
-
- .show {
-     display: block;
- }
-
- #selected {
-     color: rgb(255, 50, 0);
- }
-
- /* 바디 내용 시작 web web 웹 */
- .container {
-     display: flex;
-     flex-wrap: wrap;
-     justify-content: space-around;
-     margin-bottom: 50px;
- }
-
- .box {
-     font-weight: 400;
-     font-size: 0.85vw;
-     line-height: 140%;
-     letter-spacing: -0.02em;
-
-     margin: 0vw 0vw 6vh 0vw;
-     display: flex;
-     flex-direction: column;
-     align-items: center;
-     justify-content: center;
-     text-align: center;
- }
-
- .thumbnail-box {
-     margin-bottom: 1.5vh;
-
-     width: 23.3vw;
-     height: 16vw;
-     overflow: hidden;
-
-     display: flex;
-     justify-content: center;
-     align-items: center;
- }
-
- .thumbnail-box>img {
-     width: 100%;
-     height: 100%;
-     overflow: hidden;
-     /* 이미지 정 사이즈 */
-     object-fit: cover
- }
-
- .thumbnail:hover {
-     transform: scale(1.03);
-     transition: all 0.2s linear;
-     opacity: 0.5;
- }
+::selection {
+    background-color: rgb(255, 115, 95);
+    /* 드래그된 텍스트의 배경색을 빨간색으로 설정 */
+    color: rgb(60, 145, 255);
+    /* 드래그된 텍스트의 글자색을 흰색으로 설정 */
+}
 
 
 
- /* 모바일사이즈  모바일사이즈  모바일사이즈 */
- @media only screen and (max-width: 700px) {
 
-     /* 옵션바 mobile */
-     .optionbar {
-         margin-bottom: 3vh;
-     }
+/* WORK 인덱스 */
 
-     #optionbtn {
-         font-size: 4vw;
-     }
+.optionbar {
+    font-size: 1vw;
+    margin: 5vh 0 3vh 0;
+    display: flex;
+    justify-content: space-between;
 
-     .option-dropdown a {
-         font-size: 4vw;
-         min-width: 40vw;
-         overflow: auto;
-     }
+    z-index: 100;
+}
 
-     /* 리스트 or 갤러리 mobile */
-     .option-2 {
-         font-size: 4vw;
-         margin-left: 3vw;
-     }
+/* Button */
+#optionbtn {
+    background-color: rgba(0, 0, 0, 0);
+    text-decoration: underline;
+    color: black;
+    font-size: 1vw;
+    border: none;
+    cursor: pointer;
+}
 
-     /* 바디  바디  바디 mobile */
-     .container {
-         display: flex;
-         flex-direction: column;
-         margin-bottom: 6vh;
-     }
+#optionbtn:hover,
+#optionbtn:focus {
+    color: rgb(187, 187, 187);
+}
 
-     .box {
-         font-size: 3.5vw;
-         line-height: 140%;
-         margin: 0vw 0vw 6vh 0vw;
-         width: 100%;
-     }
+.option-1 {
+    position: relative;
+    display: inline-block;
+}
 
-     .thumbnail-box {
-         margin-bottom: 15px;
-         width: 100%;
-         height: auto;
-         max-height: 35vh;
-     }
- }
+.option-dropdown {
+    margin: 5px 0px 0px -0.7vw;
+    padding-bottom: 15px;
+    display: none;
+    position: absolute;
+    background-color: #f7f7f7;
+    border-radius: 12.5%;
+    min-width: 13.2vw;
+    overflow: auto;
+}
+
+.option-dropdown a {
+    font-size: 1vw;
+    color: black;
+    text-decoration: none;
+    padding: 15px 15px 0 15px;
+    display: block;
+}
+
+.option-1 a:hover {
+    color: rgb(187, 187, 187);
+}
+
+.show {
+    display: block;
+}
+
+#selected {
+    color: rgb(255, 50, 0);
+}
+
+/* 바디 내용 시작 web web 웹 */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-bottom: 50px;
+}
+
+.box {
+    font-weight: 400;
+    font-size: 0.85vw;
+    line-height: 140%;
+    letter-spacing: -0.02em;
+
+    margin: 0vw 0vw 6vh 0vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.thumbnail-box {
+    margin-bottom: 1.5vh;
+
+    width: 23.3vw;
+    height: 16vw;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.thumbnail-box>img {
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    /* 이미지 정 사이즈 */
+    object-fit: cover
+}
+
+.thumbnail:hover {
+    transform: scale(1.03);
+    transition: all 0.2s linear;
+    opacity: 0.5;
+}
+
+
+
+/* 모바일사이즈  모바일사이즈  모바일사이즈 */
+@media only screen and (max-width: 700px) {
+
+    /* HOME 첫 화면*/
+    #textInput {
+        display: inline-block;
+        width: 85%;
+        margin: 1em .15em;
+
+        font-size: 4em;
+        line-height: 1.15em;
+
+        border: none;
+        /* 박스 테두리 없애기 */
+    }
+
+
+
+    /* 옵션바 mobile */
+    .optionbar {
+        margin-bottom: 3vh;
+    }
+
+    #optionbtn {
+        font-size: 4vw;
+    }
+
+    .option-dropdown a {
+        font-size: 4vw;
+        min-width: 40vw;
+        overflow: auto;
+    }
+
+    /* 리스트 or 갤러리 mobile */
+    .option-2 {
+        font-size: 4vw;
+        margin-left: 3vw;
+    }
+
+    /* 바디  바디  바디 mobile */
+    .container {
+        display: flex;
+        flex-direction: column;
+        margin-bottom: 6vh;
+    }
+
+    .box {
+        font-size: 3.5vw;
+        line-height: 140%;
+        margin: 0vw 0vw 6vh 0vw;
+        width: 100%;
+    }
+
+    .thumbnail-box {
+        margin-bottom: 15px;
+        width: 100%;
+        height: auto;
+        max-height: 35vh;
+    }
+}
