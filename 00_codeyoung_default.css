@@ -20,13 +20,19 @@
 /* 영문 폰트 */
 @import url("https://use.typekit.net/vgs1vqh.css");
 
+@font-face {
+    font-family: "gravur";
+    src: url(./source_defalt/Gravur-Condensed-Regular.ttf);
+    font-weight: 400;
+}
+
 /* 기본 설정 */
 * {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
 
-    font-family: "basic-sans", "gothica1";
+    font-family: "gravur", "gothica1";
     word-break: keep-all;
     position: relative;
 }
